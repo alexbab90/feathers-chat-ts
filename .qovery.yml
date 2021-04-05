@@ -1,0 +1,23 @@
+---
+application:
+  name: "feathers-chat-ts"
+  project: "project-1"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "mainimage"
+    size: "500"
+    type: "slow_hdd"
+    mount_point: "/mnt/disk1"
+databases:
+- type: "MONGODB"
+  name: "mongo"
+  version: "4.2"
+- type: "REDIS"
+  name: "redis"
+  version: "6"
+routers:
+- name: "main-feathers-chat-ts"
+  routes:
+  - application_name: "feathers-chat-ts"
+    paths:
+    - "/*"
